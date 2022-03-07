@@ -7,6 +7,7 @@ function doThing(){
     var varfun = "varfun";
     let letfun = "letfun";
     const constfun = "constfun";
+    console.log("INSIDE DOTHING()")
 }
 doThing();
 
@@ -46,3 +47,27 @@ const superChocoloatey = {
 console.log(superChocoloatey);
 
 // arrow functions
+
+console.log(doThing);
+const otherFunc = doThing;
+otherFunc();
+
+function runThing(func){
+    func();
+}
+
+runThing(doThing);
+runThing(()=>{
+    var heyThere = "hey There";
+    for (var i = 0; i < 10; i++){
+        console.log(heyThere + " " + i);
+    }
+})
+
+const countVeryHigh = () => {
+    for (var i = 0; i < 5; i++){
+        console.log(i);
+    }
+}
+
+countVeryHigh();
